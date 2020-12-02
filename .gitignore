@@ -1,0 +1,9 @@
+obj/
+.vs/
+.git/
+bin/
+packages/
+*.user
+*.pyc
+.aws
+venv
