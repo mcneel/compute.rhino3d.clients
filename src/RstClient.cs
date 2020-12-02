@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 
@@ -10,9 +11,10 @@ namespace computegen
         public static void WritePythonDocs(string basePythonDirectory, ClassBuilder[] classes)
         {
             PythonClient.SpacesPerTab = 3;
-            var di = new System.IO.DirectoryInfo(System.IO.Path.Combine(basePythonDirectory, "docs"));
-            if( !di.Exists )
-                di = System.IO.Directory.CreateDirectory("docs\\python");
+            // var di = new System.IO.DirectoryInfo(System.IO.Path.Combine(basePythonDirectory, "docs"));
+            var di = Directory.CreateDirectory(Path.Combine(basePythonDirectory, "docs"));
+            // if( !di.Exists )
+            //     di = System.IO.Directory.CreateDirectory("docs\\python");
             foreach (var c in classes)
             {
                 StringBuilder sb = new StringBuilder();

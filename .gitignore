@@ -1,0 +1,17 @@
+obj/
+.vs/
+.git/
+bin/
+packages/
+*.csproj.user
+src/compute.client/python_client/compute_rhino3d.egg-info/
+src/compute.client/python_client/dist/
+*.pyc
+.aws
+venv
+
+# docker
+*.lic
+rhino_*.exe
+settings-Scheme__Default.xml
+cloudzoo.json
