@@ -131,7 +131,7 @@ namespace computegen
             if (!method.IsStatic())
             {
                 sb.Append($"{cb.ClassName.ToLower()}");
-                if (method.ParameterList.Parameters.Count > 0)
+                if (method.ParameterList.Parameters.Count - outParamIndices.Count > 0)
                     sb.Append(", ");
             }
 
