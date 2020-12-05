@@ -36,6 +36,10 @@ namespace computegen
 
         string WriteMethod(ClassBuilder cb, MethodDeclarationSyntax method, DocumentationCommentTriviaSyntax comment, bool useRemotes)
         {
+            string methodName = method.Identifier.ToString();
+            if (methodName.Equals("dispose", StringComparison.InvariantCultureIgnoreCase))
+                return null;
+
             int remoteCount = 0;
             StringBuilder sb = new StringBuilder();
             if (comment != null)
@@ -43,7 +47,7 @@ namespace computegen
                 string formattedComment = T2 + comment.ToFullString().Replace(T1, T2);
                 foreach(var line in formattedComment.Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.None))
                 {
-                    if (!line.Contains("<since>") && !string.IsNullOrWhiteSpace(line))
+                    if (!line.Contains("<since>") && !line.Contains("<deprecated>") && !string.IsNullOrWhiteSpace(line))
                         sb.AppendLine(line);
                 }
             }
