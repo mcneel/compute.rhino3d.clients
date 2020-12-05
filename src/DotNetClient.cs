@@ -181,5 +181,7 @@ namespace computegen
                 }
             }
         }
+
+        protected override string Suffix => "}";
     }
 }
