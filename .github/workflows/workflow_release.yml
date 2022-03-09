@@ -10,7 +10,5 @@ jobs:
         uses: actions/checkout@v2
       - name: update submodules
         run: ls && git submodule update --init
-      - name: build
-        run: dotnet build src/computegen.sln
-      - name: run
+      - name: restore, build, and run
         run: dotnet run --project src/computegen.csproj

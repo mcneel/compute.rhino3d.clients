@@ -13,3 +13,9 @@ This repository contains the source code and documentation for the .NET, Python 
 We use code-generation to create these libraries. This is handled by _computegen_, also in this repository.
 
 For more, see the [guides on the Rhino Developer Docs site](https://developer.rhino3d.com/guides/compute/).
+
+## Development
+
+run computegen
+
+`dotnet run --project src/computegen.csproj`
