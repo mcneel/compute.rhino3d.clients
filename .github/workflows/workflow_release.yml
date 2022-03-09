@@ -14,5 +14,5 @@ jobs:
         run: dotnet run --project src/computegen.csproj
       - name: pack python
         run: |
-        cd dist/python
-        python setup.py sdist
+          cd dist/python
+          python setup.py sdist
