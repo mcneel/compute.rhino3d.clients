@@ -8,7 +8,7 @@ namespace computegen
         static void Main(string[] args)
         {
             var rootDir = GetRepoRootDirectory();
-            var distDir = Path.Combine(rootDir, "dist"); // destination for generated client code
+            var distDir = "dist";
 
             var rhinocommonPath = Path.Combine("rhino3dm", "src", "dotnet");
             if (!Directory.Exists(rhinocommonPath))
