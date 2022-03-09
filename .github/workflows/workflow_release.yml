@@ -13,4 +13,6 @@ jobs:
       - name: restore, build, and run
         run: dotnet run --project src/computegen.csproj
       - name: pack python
-        run: python dist/python/setup.py sdist
+        run: |
+        cd dist/python
+        python setup.py sdist
