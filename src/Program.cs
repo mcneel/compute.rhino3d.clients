@@ -43,8 +43,11 @@ namespace computegen
             Console.WriteLine(jsDir);
             Directory.CreateDirectory(jsDir);
 
-            var js = new JavascriptClient();
+            var js = new JavascriptClient(false);
             js.Write(ClassBuilder.AllClasses, Path.Combine(jsDir, "compute.rhino3d.js"), filter);
+
+            var jsm = new JavascriptClient(true);
+            jsm.Write(ClassBuilder.AllClasses, Path.Combine(jsDir, "compute.rhino3d.module.js"), filter);
             
             Console.WriteLine("Writing javascript docs");
             RstClient.WriteJavascriptDocs(classes, distDir);
