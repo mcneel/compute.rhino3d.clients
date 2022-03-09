@@ -7,4 +7,3 @@ packages/
 *.pyc
 .aws
 venv
-dist
