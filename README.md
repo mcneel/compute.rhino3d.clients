@@ -19,3 +19,39 @@ For more, see the [guides on the Rhino Developer Docs site](https://developer.rh
 run computegen
 
 `dotnet run --project src/computegen.csproj`
+
+## Publishing
+
+NOTE: UNTESTED
+
+### python
+
+1. change directory to the dist/python directory:
+
+`cd dist/python`
+
+2. create a python source distribution. This will create a tar.gz file in the dist/python/dist directory.
+
+`python setup.py sdist`
+
+3. Upload with `twine`:
+
+`python -m twine upload dist/*`
+
+## javascript
+
+1. change directory to the dist/javascript directory:
+
+`cd dist/javascript`
+
+2. publish with npm (see note 1):
+
+`npm publish`
+
+Notes:
+
+- you need to log into npm with `npm login`
+- See https://docs.npmjs.com/creating-and-publishing-unscoped-public-packages for more info.
+
+## dotnet
+

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+
+  <metadata>
+    <id>compute-rhino3d</id>
+    <version>7.15.0</version>
+    <authors>Robert McNeel and Associates</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>dotnet library for Rhino.Compute geometry service</description>
+    <contentFiles>
+      <files include="RhinoCompute.cs" buildAction="content" flatten="true" copyToOutput="true"/>
+    </contentFiles>
+  </metadata>
+
+  <files>
+    <file src="RhinoCompute.cs" target="contentFiles/cs/any/RhinoCompute" />
+  </files>
+
+  <dependencies>
+    <dependency id="newtonsoft.json" version="12.0.3" />
+    <dependency id="rhino3dm" version="7.15.0" />
+  </dependencies>
+
+</package>
