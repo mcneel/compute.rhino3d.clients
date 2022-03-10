@@ -55,3 +55,13 @@ Notes:
 
 ## dotnet
 
+1. change directory to the dist/dotnet directory:
+
+`cd dist/dotnet`
+
+2. generate pakckage with nuget:
+
+`nuget pack compute-rhino3d.nuspec`
+
+3. push to nuget
+
